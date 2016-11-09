@@ -3,7 +3,8 @@ FROM tomcat:7.0.68-jre7
 RUN apt-get update \
     && apt-get install -y postgresql-client-9.4 \
                           openjdk-7-jdk \
-                          git
+                          git \
+                          imagej
 
 RUN curl -L -o /tmp/dockerize.tar.gz https://github.com/jwilder/dockerize/releases/download/v0.2.0/dockerize-linux-amd64-v0.2.0.tar.gz \
     && tar -C /usr/local/bin -xzvf /tmp/dockerize.tar.gz \
